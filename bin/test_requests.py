@@ -18,3 +18,7 @@ class RandomnessBeacon():
             for i in self.unique_letters:
                 print "{0:s},{1:d}".format(i,self.tag_output_value.count(i))
 
+if __name__=='__main__':
+    random_beacon = RandomnessBeacon(URL)
+    random_beacon.get_output_value_tag()
+    random_beacon.get_result()

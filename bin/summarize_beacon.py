@@ -33,12 +33,12 @@ def parse_time(time_from):
             days=int(numbers[i])
         elif j.startswith('h'):
             hours=int(numbers[i])
-    year = int(strftime("%Y", gmtime()))
-    month = int(strftime("%m", gmtime())) - months
-    day = int(strftime("%d", gmtime())) - days
-    hour = int(strftime("%H", gmtime()))-hours
-    minute = int(strftime("%M", gmtime()))
-    dt = datetime.datetime(year,months,day,hour,minute)
+    num_year = int(strftime("%Y", gmtime()))
+    num_month = int(strftime("%m", gmtime())) - months
+    num_day = int(strftime("%d", gmtime())) - days
+    num_hour = int(strftime("%H", gmtime()))-hours
+    num_minute = int(strftime("%M", gmtime()))
+    dt = datetime.datetime(num_year,num_month,num_day,num_hour,num_minute)
     return time.mktime(dt.timetuple())
 
 def send_request(timestamp):
